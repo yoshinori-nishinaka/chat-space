@@ -15,8 +15,8 @@
 ## chatsテーブル
 |Column|Type|Option|
 |------|----|------|
-|text|text|null: false|
-|image|text|null: false|
+|text|text||
+|image|text||
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 
