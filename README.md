@@ -20,8 +20,8 @@
 |group_id|integer|null: false, foreign_kye: true|
 
 ### Association
-- belongs :group
-- belongs :chat
+- belongs_to :group
+- belongs_to :chat
 
 ## groupsテーブル
 |Column|Type|Option|
@@ -30,5 +30,5 @@
 |user_id|integer|null: false, foreign_kye: true|
 
 ### Association
-- belongs :user
+- belongs_to :user
 - has_many :chats
