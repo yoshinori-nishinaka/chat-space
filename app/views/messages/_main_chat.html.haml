@@ -1,0 +1,36 @@
+.main
+  .info
+    .info__name
+      .info__name_group
+        name
+      .info__name_user
+        toro
+    .info__edit
+      =link_to "#", class: "info__edit__btn" do
+        Edit
+  .chat
+    .chat__textbox
+      .chat__textbox__info
+        .chat__textbox__info_name
+          taro
+        .chat__textbox__info_daytime
+          20191228
+      .chat__textbox__text
+        hello
+    .chat__textbox
+      .chat__textbox__info
+        .chat__textbox__info_name
+          ziro
+        .chat__textbox__info_daytime
+          20191229
+      .chat__textbox__text
+        hello!
+
+  .form
+    %form.new_message
+      .input_box
+        %input{type: "text", class: "input_box__text", placeholder: "type a message"}
+        %label{class: "input_box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input_box__image__file"}
+      %input{type: "submit", class: "submit_btn", value: "Send"}

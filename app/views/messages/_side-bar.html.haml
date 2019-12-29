@@ -1,0 +1,21 @@
+.side
+  .user
+    .user__block
+      .user__block_name
+        yoshi
+      %ul.user__block_menu
+        %li
+          = link_to "#", class: "user__block_menu__btn" do
+            = icon('fas', 'edit')
+            %span<>
+          = link_to "#", class: "user__block_menu__btn" do
+            = icon('fas', 'cog')
+        
+  .group
+    .group__list
+      %p.name side-group
+      %p.message mada
+    .group__list
+      %p.name side-group
+      %p.message mada
+  
