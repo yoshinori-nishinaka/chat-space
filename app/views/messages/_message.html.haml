@@ -1,0 +1,12 @@
+.chat__textbox
+  .chat__textbox__info
+    .chat__textbox__info_name
+      = message.user.name
+    .chat__textbox__info_daytime
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .chat__textbox__text
+    - if message.text.present?
+      %p.file
+        = message.text
+    = image_tag message.image.url, class: 'file_image' if message.image.present?
+    
