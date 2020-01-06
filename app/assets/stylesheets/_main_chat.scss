@@ -72,7 +72,6 @@ $mainfont_color2: #999999;
     form {
       display: flex;
       .input_box {
-        width: 100%;
         display: flex;
         position: relative;
         &__text {
@@ -85,7 +84,7 @@ $mainfont_color2: #999999;
           position: absolute;
           top: 10px;
           right: 10px;
-          &__file {
+          &_file {
             display: none;
           }
         }

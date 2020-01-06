@@ -2,34 +2,21 @@
   .info
     .info__name
       .info__name_group
-        name
+        = @group.name
       .info__name_user
-        toro
+        - @group.group_users.each do |group_users|
+          = group_users.user.name
     .info__edit
-      =link_to "#", class: "info__edit__btn" do
+      = link_to "edit", class: "info__edit__btn" do
         Edit
   .chat
-    .chat__textbox
-      .chat__textbox__info
-        .chat__textbox__info_name
-          taro
-        .chat__textbox__info_daytime
-          20191228
-      .chat__textbox__text
-        hello
-    .chat__textbox
-      .chat__textbox__info
-        .chat__textbox__info_name
-          ziro
-        .chat__textbox__info_daytime
-          20191229
-      .chat__textbox__text
-        hello!
+    = render @messages
+
   .form
-    %form.new_message
+    = form_for [@group, @message] do |f|
+      = f.text_field :text, class: 'input_box__text', placeholder: 'type a message'
       .input_box
-        %input{type: "text", class: "input_box__text", placeholder: "type a message"}
-        %label{class: "input_box__image"}
+        = f.label :image, class: 'input_box__image' do
           = icon('fas', 'image')
-          %input{type: "file", class: "input_box__image__file"}
-      %input{type: "submit", class: "submit_btn", value: "Send"}
+          = f.file_field :image, class: 'input_box__image_file'
+      = f.submit 'Send', class: 'submit_btn'
