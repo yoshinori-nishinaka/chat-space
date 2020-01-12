@@ -41,15 +41,18 @@ $sidefont_color: #ffffff;
     &__list {
       width: 100%;
       margin-bottom: 40px;
-      .name {
-        color: $sidefont_color;
-        font-size: 15px;
-        margin-bottom: 5px;
-        
-      }
-      .message {
-        color: $sidefont_color;
-        font-size: 11px;
+      &_box {
+        text-decoration: none;
+        .name {
+          color: $sidefont_color;
+          font-size: 15px;
+          margin-bottom: 5px;
+          
+        }
+        .message {
+          color: $sidefont_color;
+          font-size: 11px;
+        }
       }
     }
   }
